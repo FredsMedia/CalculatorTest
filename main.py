@@ -32,12 +32,13 @@ def div():
     num1 = float(input('what is your first number? '))
     num2 = float(input('what is your second number? '))
 
-    if num1 or num2 == "0":
-        answer == 0
+    try:
+        answer = num1 / num2
+    except ZeroDivisionError:
+        answer = 0
+
         print(answer)
         end()
-
-    answer = num1 / num2
 
     print(answer)
     end()
